@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajan Silver Jubilee — 25th Anniversary</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Noto+Serif+Devanagari:wght@300;400;500;600&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #c9920a;
+  --gold-light: #f0c040;
+  --gold-dark: #7a4f00;
+  --crimson: #8b0000;
+  --ivory: #fdf6e3;
+  --parchment: #f5e6c0;
+  --deep-maroon: #4a0a0a;
+  --copper: #b5651d;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: radial-gradient(ellipse at center, #1a0500 0%, #0d0000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 760px;
+}
+
+/* Outer glow aura */
+.card-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -30px;
+  background: radial-gradient(ellipse, rgba(201,146,10,0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card {
+  width: 760px;
+  background: 
+    linear-gradient(180deg, #fdf0cd 0%, #f9e4a8 20%, #faeec8 50%, #f5dea0 80%, #fdf0cd 100%);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 0 0 2px #c9920a,
+    0 0 0 6px rgba(201,146,10,0.3),
+    0 0 60px rgba(180,100,0,0.5),
+    0 0 120px rgba(120,50,0,0.3),
+    inset 0 0 100px rgba(180,100,0,0.06);
+  z-index: 1;
+}
+
+/* ===================== BACKGROUND ART ===================== */
+
+/* Mughal arch background */
+.bg-arch {
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 600px;
+  height: 700px;
+  opacity: 0.04;
+  z-index: 0;
+}
+
+/* Paisley/Mandala background watermark */
+.bg-mandala {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px;
+  height: 520px;
+  opacity: 0.055;
+  z-index: 0;
+  animation: slowSpin 60s linear infinite;
+}
+
+@keyframes slowSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Kalash top center */
+.bg-kalash {
+  position: absolute;
+  top: 30px; left: 50%; transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  opacity: 0.12;
+  z-index: 0;
+}
+
+/* ===================== BORDERS ===================== */
+
+.border-outer {
+  position: absolute;
+  inset: 10px;
+  border: 2.5px solid var(--gold);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.border-mid {
+  position: absolute;
+  inset: 16px;
+  border: 1px solid rgba(201,146,10,0.5);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.border-inner {
+  position: absolute;
+  inset: 22px;
+  border: 0.5px solid rgba(201,146,10,0.3);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Top & bottom full-width ornamental bands */
+.band-top {
+  position: absolute;
+  top: 10px; left: 10px; right: 10px;
+  height: 60px;
+  z-index: 3;
+  overflow: hidden;
+}
+.band-bottom {
+  position: absolute;
+  bottom: 10px; left: 10px; right: 10px;
+  height: 60px;
+  z-index: 3;
+  overflow: hidden;
+}
+
+/* ===================== GRAND CORNER ORNAMENTS ===================== */
+.corner {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  z-index: 10;
+}
+.corner-tl { top: 6px; left: 6px; }
+.corner-tr { top: 6px; right: 6px; transform: scaleX(-1); }
+.corner-bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
+.corner-br { bottom: 6px; right: 6px; transform: scale(-1,-1); }
+
+/* Side ornamental strips */
+.side-strip {
+  position: absolute;
+  top: 150px; bottom: 150px;
+  width: 42px;
+  z-index: 3;
+}
+.side-strip.left { left: 10px; }
+.side-strip.right { right: 10px; transform: scaleX(-1); }
+
+/* ===================== CONTENT ===================== */
+.content {
+  position: relative;
+  z-index: 5;
+  padding: 72px 100px 44px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Om + Swastika row */
+.sacred-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 2px;
+  height: 64px;
+}
+
+.om-glyph {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 52px;
+  background: linear-gradient(180deg, #f0c040 0%, #c9920a 50%, #7a4f00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(240,192,64,0.5));
+  animation: omPulse 4s ease-in-out infinite;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  transform: translateY(4px);
+}
+
+.swastika {
+  font-size: 28px;
+  color: var(--gold);
+  opacity: 0.7;
+  font-family: serif;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+@keyframes omPulse {
+  0%,100% { filter: drop-shadow(0 0 6px rgba(240,192,64,0.4)); }
+  50% { filter: drop-shadow(0 0 18px rgba(240,192,64,0.8)); }
+}
+
+/* Sanskrit blessings */
+.sanskrit-1 {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 16px;
+  color: var(--crimson);
+  letter-spacing: 4px;
+  margin: 4px 0 0;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.sanskrit-2 {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 13px;
+  color: var(--gold-dark);
+  letter-spacing: 3px;
+  margin: 2px 0 12px;
+  opacity: 0.75;
+  font-style: italic;
+}
+
+/* Horizontal ornamental divider */
+.hdivider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* "With hearts full of reverence" */
+.preamble {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+/* Hosts */
+.hosts-label {
+  font-family: 'IM Fell English', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5a2d00;
+  margin-bottom: 2px;
+}
+.hosts-names {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 26px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #5a2d00 0%, #c9920a 45%, #7a4f00 80%, #c9920a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px;
+  text-shadow: none;
+  filter: drop-shadow(0 2px 4px rgba(100,50,0,0.2));
+  margin-bottom: 8px;
+}
+
+.invite-phrase {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  color: #5a3000;
+  letter-spacing: 1.5px;
+  margin-bottom: 14px;
+}
+
+/* Silver Jubilee banner */
+.jubilee-banner {
+  position: relative;
+  margin: 8px 0;
+  padding: 8px 0;
+}
+
+.rajan-label {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 13px;
+  color: var(--gold-dark);
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  opacity: 0.8;
+}
+
+.number-25 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 100px;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(160deg, #7a4000 0%, #f0c040 25%, #c9920a 50%, #f0c040 75%, #7a4000 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 4px 12px rgba(180,100,0,0.4));
+  animation: shimmer 4s ease-in-out infinite;
+  letter-spacing: -4px;
+  margin-bottom: 6px;
+  position: relative;
+}
+
+.number-25 .th-suffix {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 42px;
+  font-weight: 700;
+  -webkit-text-fill-color: #c9920a;
+  color: #c9920a;
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  vertical-align: super;
+  letter-spacing: 1px;
+  margin-left: 4px;
+  opacity: 1;
+}
+
+.years-label {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 13px;
+  letter-spacing: 7px;
+  color: var(--crimson);
+  text-transform: uppercase;
+  margin-top: 0;
+}
+@keyframes shimmer {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.wedding-anniv {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-dark);
+  letter-spacing: 3px;
+  margin-top: 2px;
+}
+
+/* Couple Names — The HEART of the card */
+.couple-wrap {
+  margin: 14px 0 10px;
+  position: relative;
+}
+
+.couple-name {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4a1500 0%, #c9920a 40%, #8b5000 70%, #c9920a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2px;
+  filter: drop-shadow(0 3px 8px rgba(180,100,0,0.3));
+  line-height: 1.2;
+}
+
+.couple-amp {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 300;
+  background: linear-gradient(135deg, #c9920a, #f0c040, #c9920a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  line-height: 1;
+  margin: 0px 0;
+}
+
+.married-since {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: #7a4500;
+  letter-spacing: 2px;
+  margin-top: 6px;
+  opacity: 0.85;
+}
+
+/* Event Box */
+.event-box {
+  width: 88%;
+  margin: 14px 0 10px;
+  position: relative;
+  padding: 22px 30px 20px;
+  background: linear-gradient(135deg, rgba(139,0,0,0.05), rgba(201,146,10,0.1), rgba(139,0,0,0.05));
+  border: 1px solid rgba(201,146,10,0.5);
+}
+
+.event-box::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 0.5px solid rgba(201,146,10,0.25);
+  pointer-events: none;
+}
+
+.event-day-date {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 18px;
+  color: var(--crimson);
+  letter-spacing: 3px;
+  margin-bottom: 4px;
+}
+
+.event-date-full {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--gold-dark);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.event-time {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: #5a3000;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.venue-line1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 16px;
+  color: var(--gold-dark);
+  letter-spacing: 2px;
+  margin-bottom: 3px;
+}
+.venue-line2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  color: #5a3000;
+  letter-spacing: 1.5px;
+  line-height: 1.7;
+}
+
+/* RSVP */
+.rsvp-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+.rsvp-label {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--crimson);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.rsvp-num {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 15px;
+  color: var(--gold-dark);
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1;
+  line-height: 1;
+}
+
+/* Bottom blessings */
+.bottom-blessings {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.mantra-sanskrit {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 15px;
+  color: var(--crimson);
+  letter-spacing: 4px;
+  opacity: 0.85;
+  font-weight: 500;
+}
+.mantra-english {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--gold-dark);
+  letter-spacing: 1.5px;
+  opacity: 0.7;
+}
+
+/* Load-in animation */
+.content > * {
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+.content > *:nth-child(1) { animation-delay: 0.1s; }
+.content > *:nth-child(2) { animation-delay: 0.2s; }
+.content > *:nth-child(3) { animation-delay: 0.3s; }
+.content > *:nth-child(4) { animation-delay: 0.35s; }
+.content > *:nth-child(5) { animation-delay: 0.4s; }
+.content > *:nth-child(6) { animation-delay: 0.45s; }
+.content > *:nth-child(7) { animation-delay: 0.5s; }
+.content > *:nth-child(8) { animation-delay: 0.55s; }
+.content > *:nth-child(9) { animation-delay: 0.6s; }
+.content > *:nth-child(10) { animation-delay: 0.65s; }
+.content > *:nth-child(11) { animation-delay: 0.7s; }
+.content > *:nth-child(12) { animation-delay: 0.75s; }
+.content > *:nth-child(13) { animation-delay: 0.8s; }
+.content > *:nth-child(14) { animation-delay: 0.85s; }
+.content > *:nth-child(15) { animation-delay: 0.9s; }
+.content > *:nth-child(16) { animation-delay: 0.95s; }
+.content > *:nth-child(17) { animation-delay: 1.0s; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+  ✏️  EDITABLE INVITATION DETAILS — Change only this section
+  Open this file in any text editor (Notepad, VS Code, etc.)
+  and update the values below. Save and open in a browser.
+============================================================ -->
+<script>
+  const INVITE = {
+    // ── Hosts (children throwing the party) ─────────────────
+    hostsRelation:  "Their sons",           // e.g. "Their daughters" / "Their children"
+    hostsNames:     "Udit & Yash",
+
+    // ── Parents' names ───────────────────────────────────────
+    fatherName:     "Lakshmi Narayan Ji",
+    motherName:     "Savita Ji",
+
+    // ── Marriage year ────────────────────────────────────────
+    marriageYear:   "2001",
+
+    // ── Anniversary number & label ───────────────────────────
+    anniversaryNumber: "25",
+    yearsLabel:     "Wedding Anniversary",
+
+    // ── Event details ────────────────────────────────────────
+    eventDay:       "Wednesday",
+    eventDate:      "25th February, 2026",
+    eventTime:      "7:00 PM",
+    venueName:      "Hotel Skylark",
+    venueAddress:   "Ambala Road, Saharanpur",
+
+    // ── RSVP ─────────────────────────────────────────────────
+    rsvpNumber:     "+91 98979 18964",
+
+    // ── Optional text lines ──────────────────────────────────
+    preamble:       "With reverence, gratitude & boundless joy",
+    invitePhrase:   "joyfully seek your divine blessings & gracious presence<br>to celebrate the",
+    marriedSince:   "Joined in sacred matrimony",  // year auto-appended
+    bottomMantra:   "॥ सर्वे भवन्तु सुखिनः ॥",
+  };
+
+  // Auto-populate all fields when DOM is ready
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("f-hosts-relation").textContent   = INVITE.hostsRelation;
+    document.getElementById("f-hosts-names").innerHTML        = INVITE.hostsNames;
+    document.getElementById("f-father-name").textContent      = INVITE.fatherName;
+    document.getElementById("f-mother-name").textContent      = INVITE.motherName;
+    document.getElementById("f-anniv-number").innerHTML       = INVITE.anniversaryNumber + '<span class="th-suffix">th</span>';
+    document.getElementById("f-years-label").innerHTML        = "✦ &nbsp; " + INVITE.yearsLabel + " &nbsp; ✦";
+    document.getElementById("f-event-day").textContent        = INVITE.eventDay;
+    document.getElementById("f-event-date").textContent       = INVITE.eventDate;
+    document.getElementById("f-event-time").textContent       = INVITE.eventTime;
+    document.getElementById("f-venue-name").textContent       = INVITE.venueName;
+    document.getElementById("f-venue-address").textContent    = INVITE.venueAddress;
+    document.getElementById("f-rsvp-number").textContent      = INVITE.rsvpNumber;
+    document.getElementById("f-preamble").textContent         = INVITE.preamble;
+    document.getElementById("f-invite-phrase").innerHTML      = INVITE.invitePhrase;
+    document.getElementById("f-married-since").innerHTML      =
+      INVITE.marriedSince + " — " + INVITE.marriageYear +
+      " &nbsp;•&nbsp; Through twenty-five golden years";
+    document.getElementById("f-bottom-mantra").textContent    = INVITE.bottomMantra;
+  });
+</script>
+<div class="card-wrapper">
+<div class="card">
+
+  <!-- ===== BACKGROUND MANDALA ===== -->
+  <svg class="bg-mandala" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#c9920a" fill="none" stroke-width="0.8">
+      <!-- Rings -->
+      <circle cx="250" cy="250" r="240" stroke-dasharray="4 6"/>
+      <circle cx="250" cy="250" r="220"/>
+      <circle cx="250" cy="250" r="200" stroke-dasharray="2 4"/>
+      <circle cx="250" cy="250" r="180"/>
+      <circle cx="250" cy="250" r="150"/>
+      <circle cx="250" cy="250" r="120"/>
+      <circle cx="250" cy="250" r="90"/>
+      <circle cx="250" cy="250" r="60"/>
+      <circle cx="250" cy="250" r="30"/>
+      <!-- 16 spokes -->
+      <g>
+        <line x1="250" y1="10" x2="250" y2="490"/>
+        <line x1="10" y1="250" x2="490" y2="250"/>
+        <line x1="80" y1="80" x2="420" y2="420"/>
+        <line x1="420" y1="80" x2="80" y2="420"/>
+        <line x1="165" y1="18" x2="335" y2="482"/>
+        <line x1="18" y1="165" x2="482" y2="335"/>
+        <line x1="335" y1="18" x2="165" y2="482"/>
+        <line x1="18" y1="335" x2="482" y2="165"/>
+      </g>
+      <!-- Petal ring at r=180 -->
+      <g>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(0 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(22.5 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(45 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(67.5 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(90 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(112.5 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(135 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(157.5 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(180 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(202.5 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(225 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(247.5 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(270 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(292.5 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(315 250 250)"/>
+        <ellipse cx="250" cy="80" rx="18" ry="30" transform="rotate(337.5 250 250)"/>
+      </g>
+      <!-- Diamond ring at r=120 -->
+      <g>
+        <polygon points="250,136 258,250 250,364 242,250" transform="rotate(0 250 250)" opacity="0.5"/>
+        <polygon points="250,136 258,250 250,364 242,250" transform="rotate(30 250 250)" opacity="0.5"/>
+        <polygon points="250,136 258,250 250,364 242,250" transform="rotate(60 250 250)" opacity="0.5"/>
+        <polygon points="250,136 258,250 250,364 242,250" transform="rotate(90 250 250)" opacity="0.5"/>
+        <polygon points="250,136 258,250 250,364 242,250" transform="rotate(120 250 250)" opacity="0.5"/>
+        <polygon points="250,136 258,250 250,364 242,250" transform="rotate(150 250 250)" opacity="0.5"/>
+      </g>
+      <!-- Center star -->
+      <polygon points="250,220 257,243 281,243 262,257 269,281 250,267 231,281 238,257 219,243 243,243" fill="#c9920a" opacity="0.3"/>
+    </g>
+  </svg>
+
+  <!-- ===== TOP ORNAMENTAL BAND ===== -->
+  <div class="band-top">
+    <svg viewBox="0 0 740 60" width="740" height="60" xmlns="http://www.w3.org/2000/svg">
+      <!-- repeating arch/chevron pattern -->
+      <defs>
+        <linearGradient id="bandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(201,146,10,0)"/>
+          <stop offset="20%" style="stop-color:rgba(201,146,10,0.8)"/>
+          <stop offset="50%" style="stop-color:rgba(240,192,64,1)"/>
+          <stop offset="80%" style="stop-color:rgba(201,146,10,0.8)"/>
+          <stop offset="100%" style="stop-color:rgba(201,146,10,0)"/>
+        </linearGradient>
+      </defs>
+      <path d="M0,55 L0,20 Q30,0 60,20 Q90,40 120,20 Q150,0 180,20 Q210,40 240,20 Q270,0 300,20 Q330,40 360,20 Q390,0 420,20 Q450,40 480,20 Q510,0 540,20 Q570,40 600,20 Q630,0 660,20 Q690,40 720,20 L740,20 L740,55 Z" fill="url(#bandGrad)" opacity="0.25"/>
+      <path d="M0,55 L0,22 Q30,2 60,22 Q90,42 120,22 Q150,2 180,22 Q210,42 240,22 Q270,2 300,22 Q330,42 360,22 Q390,2 420,22 Q450,42 480,22 Q510,2 540,22 Q570,42 600,22 Q630,2 660,22 Q690,42 720,22 L740,22" fill="none" stroke="url(#bandGrad)" stroke-width="1.5"/>
+      <!-- Dots at peaks -->
+      <g fill="#c9920a" opacity="0.9">
+        <circle cx="60" cy="22" r="3"/>
+        <circle cx="120" cy="22" r="2"/>
+        <circle cx="180" cy="22" r="3"/>
+        <circle cx="240" cy="22" r="2"/>
+        <circle cx="300" cy="22" r="3"/>
+        <circle cx="360" cy="22" r="2"/>
+        <circle cx="420" cy="22" r="3"/>
+        <circle cx="480" cy="22" r="2"/>
+        <circle cx="540" cy="22" r="3"/>
+        <circle cx="600" cy="22" r="2"/>
+        <circle cx="660" cy="22" r="3"/>
+      </g>
+      <!-- Bottom line -->
+      <line x1="0" y1="58" x2="740" y2="58" stroke="url(#bandGrad)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <!-- ===== BOTTOM ORNAMENTAL BAND ===== -->
+  <div class="band-bottom">
+    <svg viewBox="0 0 740 60" width="740" height="60" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,5 L0,40 Q30,60 60,40 Q90,20 120,40 Q150,60 180,40 Q210,20 240,40 Q270,60 300,40 Q330,20 360,40 Q390,60 420,40 Q450,20 480,40 Q510,60 540,40 Q570,20 600,40 Q630,60 660,40 Q690,20 720,40 L740,40 L740,5 Z" fill="url(#bandGrad)" opacity="0.25"/>
+      <path d="M0,5 L0,38 Q30,58 60,38 Q90,18 120,38 Q150,58 180,38 Q210,18 240,38 Q270,58 300,38 Q330,18 360,38 Q390,58 420,38 Q450,18 480,38 Q510,58 540,38 Q570,18 600,38 Q630,58 660,38 Q690,18 720,38 L740,38" fill="none" stroke="url(#bandGrad)" stroke-width="1.5"/>
+      <g fill="#c9920a" opacity="0.9">
+        <circle cx="60" cy="38" r="3"/>
+        <circle cx="180" cy="38" r="3"/>
+        <circle cx="300" cy="38" r="3"/>
+        <circle cx="420" cy="38" r="3"/>
+        <circle cx="540" cy="38" r="3"/>
+        <circle cx="660" cy="38" r="3"/>
+      </g>
+      <line x1="0" y1="2" x2="740" y2="2" stroke="url(#bandGrad)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <!-- ===== BORDERS ===== -->
+  <div class="border-outer"></div>
+  <div class="border-mid"></div>
+  <div class="border-inner"></div>
+
+  <!-- ===== GRAND CORNER ORNAMENTS ===== -->
+  <!-- TOP LEFT -->
+  <div class="corner corner-tl">
+    <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#f0c040"/>
+          <stop offset="50%" style="stop-color:#c9920a"/>
+          <stop offset="100%" style="stop-color:#7a4f00"/>
+        </linearGradient>
+      </defs>
+      <!-- Main L-frame -->
+      <path d="M4,4 L4,90 Q4,4 90,4 Z" fill="rgba(201,146,10,0.08)"/>
+      <!-- Outer frame lines -->
+      <path d="M4,4 L4,80" stroke="url(#cg1)" stroke-width="2"/>
+      <path d="M4,4 L80,4" stroke="url(#cg1)" stroke-width="2"/>
+      <!-- Corner dot -->
+      <circle cx="4" cy="4" r="5" fill="#c9920a" stroke="#f0c040" stroke-width="1"/>
+      <!-- Mughal arch element -->
+      <path d="M4,4 Q50,4 50,50 Q50,4 96,4" stroke="#c9920a" stroke-width="1.2" opacity="0.6"/>
+      <path d="M4,4 Q4,50 50,50 Q4,50 4,96" stroke="#c9920a" stroke-width="1.2" opacity="0.6"/>
+      <!-- Inner diagonal arch -->
+      <path d="M20,20 Q50,20 50,50 Q50,20 80,20" stroke="#c9920a" stroke-width="0.8" opacity="0.4"/>
+      <path d="M20,20 Q20,50 50,50 Q20,50 20,80" stroke="#c9920a" stroke-width="0.8" opacity="0.4"/>
+      <!-- Center jewel -->
+      <circle cx="50" cy="50" r="6" fill="#c9920a" opacity="0.7"/>
+      <circle cx="50" cy="50" r="3" fill="#f0c040" opacity="0.9"/>
+      <!-- Paisley swirl top -->
+      <path d="M4,30 Q12,22 22,28 Q30,34 25,44 Q20,52 12,48 Q5,44 8,36 Q11,28 20,30" stroke="#c9920a" stroke-width="1" fill="rgba(201,146,10,0.15)"/>
+      <circle cx="16" cy="36" r="2" fill="#c9920a" opacity="0.6"/>
+      <!-- Paisley swirl side -->
+      <path d="M30,4 Q22,12 28,22 Q34,30 44,25 Q52,20 48,12 Q44,5 36,8 Q28,11 30,20" stroke="#c9920a" stroke-width="1" fill="rgba(201,146,10,0.15)"/>
+      <circle cx="36" cy="16" r="2" fill="#c9920a" opacity="0.6"/>
+      <!-- Diamond chain on L-arms -->
+      <polygon points="4,55 8,60 4,65 0,60" fill="#c9920a" opacity="0.7"/>
+      <polygon points="4,70 8,75 4,80 0,75" fill="#c9920a" opacity="0.5"/>
+      <polygon points="55,4 60,8 65,4 60,0" fill="#c9920a" opacity="0.7"/>
+      <polygon points="70,4 75,8 80,4 75,0" fill="#c9920a" opacity="0.5"/>
+      <!-- Kalash mini at corner -->
+      <path d="M50,46 Q44,36 46,28 Q48,22 50,20 Q52,22 54,28 Q56,36 50,46Z" fill="rgba(201,146,10,0.25)" stroke="#c9920a" stroke-width="0.8"/>
+      <path d="M46,28 Q50,25 54,28" stroke="#c9920a" stroke-width="0.8" fill="none"/>
+      <path d="M47,24 Q50,21 53,24" stroke="#c9920a" stroke-width="0.8" fill="none"/>
+      <circle cx="50" cy="20" r="2" fill="#c9920a" opacity="0.7"/>
+      <!-- Mango/Paisley outer -->
+      <path d="M4,100 Q10,88 20,90 Q28,92 26,100" stroke="#c9920a" stroke-width="0.8" fill="rgba(201,146,10,0.08)" opacity="0.5"/>
+      <path d="M100,4 Q88,10 90,20 Q92,28 100,26" stroke="#c9920a" stroke-width="0.8" fill="rgba(201,146,10,0.08)" opacity="0.5"/>
+      <!-- Fine grid texture near corner -->
+      <path d="M4,10 L14,4 M4,18 L22,4 M4,26 L30,4" stroke="#c9920a" stroke-width="0.4" opacity="0.25"/>
+    </svg>
+  </div>
+
+  <div class="corner corner-tr">
+    <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#f0c040"/>
+          <stop offset="50%" style="stop-color:#c9920a"/>
+          <stop offset="100%" style="stop-color:#7a4f00"/>
+        </linearGradient>
+      </defs>
+      <path d="M4,4 L4,90 Q4,4 90,4 Z" fill="rgba(201,146,10,0.08)"/>
+      <path d="M4,4 L4,80" stroke="url(#cg2)" stroke-width="2"/>
+      <path d="M4,4 L80,4" stroke="url(#cg2)" stroke-width="2"/>
+      <circle cx="4" cy="4" r="5" fill="#c9920a" stroke="#f0c040" stroke-width="1"/>
+      <path d="M4,4 Q50,4 50,50 Q50,4 96,4" stroke="#c9920a" stroke-width="1.2" opacity="0.6"/>
+      <path d="M4,4 Q4,50 50,50 Q4,50 4,96" stroke="#c9920a" stroke-width="1.2" opacity="0.6"/>
+      <path d="M20,20 Q50,20 50,50 Q50,20 80,20" stroke="#c9920a" stroke-width="0.8" opacity="0.4"/>
+      <path d="M20,20 Q20,50 50,50 Q20,50 20,80" stroke="#c9920a" stroke-width="0.8" opacity="0.4"/>
+      <circle cx="50" cy="50" r="6" fill="#c9920a" opacity="0.7"/>
+      <circle cx="50" cy="50" r="3" fill="#f0c040" opacity="0.9"/>
+      <path d="M4,30 Q12,22 22,28 Q30,34 25,44 Q20,52 12,48 Q5,44 8,36 Q11,28 20,30" stroke="#c9920a" stroke-width="1" fill="rgba(201,146,10,0.15)"/>
+      <circle cx="16" cy="36" r="2" fill="#c9920a" opacity="0.6"/>
+      <path d="M30,4 Q22,12 28,22 Q34,30 44,25 Q52,20 48,12 Q44,5 36,8 Q28,11 30,20" stroke="#c9920a" stroke-width="1" fill="rgba(201,146,10,0.15)"/>
+      <circle cx="36" cy="16" r="2" fill="#c9920a" opacity="0.6"/>
+      <polygon points="4,55 8,60 4,65 0,60" fill="#c9920a" opacity="0.7"/>
+      <polygon points="4,70 8,75 4,80 0,75" fill="#c9920a" opacity="0.5"/>
+      <polygon points="55,4 60,8 65,4 60,0" fill="#c9920a" opacity="0.7"/>
+      <polygon points="70,4 75,8 80,4 75,0" fill="#c9920a" opacity="0.5"/>
+      <path d="M50,46 Q44,36 46,28 Q48,22 50,20 Q52,22 54,28 Q56,36 50,46Z" fill="rgba(201,146,10,0.25)" stroke="#c9920a" stroke-width="0.8"/>
+      <path d="M46,28 Q50,25 54,28" stroke="#c9920a" stroke-width="0.8" fill="none"/>
+      <circle cx="50" cy="20" r="2" fill="#c9920a" opacity="0.7"/>
+    </svg>
+  </div>
+
+  <div class="corner corner-bl">
+    <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4,4 L4,90 Q4,4 90,4 Z" fill="rgba(201,146,10,0.08)"/>
+      <path d="M4,4 L4,80" stroke="#c9920a" stroke-width="2"/>
+      <path d="M4,4 L80,4" stroke="#c9920a" stroke-width="2"/>
+      <circle cx="4" cy="4" r="5" fill="#c9920a" stroke="#f0c040" stroke-width="1"/>
+      <path d="M4,4 Q50,4 50,50 Q50,4 96,4" stroke="#c9920a" stroke-width="1.2" opacity="0.6"/>
+      <path d="M4,4 Q4,50 50,50 Q4,50 4,96" stroke="#c9920a" stroke-width="1.2" opacity="0.6"/>
+      <path d="M20,20 Q50,20 50,50 Q50,20 80,20" stroke="#c9920a" stroke-width="0.8" opacity="0.4"/>
+      <path d="M20,20 Q20,50 50,50 Q20,50 20,80" stroke="#c9920a" stroke-width="0.8" opacity="0.4"/>
+      <circle cx="50" cy="50" r="6" fill="#c9920a" opacity="0.7"/>
+      <circle cx="50" cy="50" r="3" fill="#f0c040" opacity="0.9"/>
+      <path d="M4,30 Q12,22 22,28 Q30,34 25,44 Q20,52 12,48 Q5,44 8,36 Q11,28 20,30" stroke="#c9920a" stroke-width="1" fill="rgba(201,146,10,0.15)"/>
+      <path d="M30,4 Q22,12 28,22 Q34,30 44,25 Q52,20 48,12 Q44,5 36,8 Q28,11 30,20" stroke="#c9920a" stroke-width="1" fill="rgba(201,146,10,0.15)"/>
+      <polygon points="4,55 8,60 4,65 0,60" fill="#c9920a" opacity="0.7"/>
+      <polygon points="55,4 60,8 65,4 60,0" fill="#c9920a" opacity="0.7"/>
+    </svg>
+  </div>
+
+  <div class="corner corner-br">
+    <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4,4 L4,90 Q4,4 90,4 Z" fill="rgba(201,146,10,0.08)"/>
+      <path d="M4,4 L4,80" stroke="#c9920a" stroke-width="2"/>
+      <path d="M4,4 L80,4" stroke="#c9920a" stroke-width="2"/>
+      <circle cx="4" cy="4" r="5" fill="#c9920a" stroke="#f0c040" stroke-width="1"/>
+      <path d="M4,4 Q50,4 50,50 Q50,4 96,4" stroke="#c9920a" stroke-width="1.2" opacity="0.6"/>
+      <path d="M4,4 Q4,50 50,50 Q4,50 4,96" stroke="#c9920a" stroke-width="1.2" opacity="0.6"/>
+      <path d="M20,20 Q50,20 50,50 Q50,20 80,20" stroke="#c9920a" stroke-width="0.8" opacity="0.4"/>
+      <path d="M20,20 Q20,50 50,50 Q20,50 20,80" stroke="#c9920a" stroke-width="0.8" opacity="0.4"/>
+      <circle cx="50" cy="50" r="6" fill="#c9920a" opacity="0.7"/>
+      <circle cx="50" cy="50" r="3" fill="#f0c040" opacity="0.9"/>
+      <path d="M4,30 Q12,22 22,28 Q30,34 25,44 Q20,52 12,48 Q5,44 8,36 Q11,28 20,30" stroke="#c9920a" stroke-width="1" fill="rgba(201,146,10,0.15)"/>
+      <path d="M30,4 Q22,12 28,22 Q34,30 44,25 Q52,20 48,12 Q44,5 36,8 Q28,11 30,20" stroke="#c9920a" stroke-width="1" fill="rgba(201,146,10,0.15)"/>
+      <polygon points="4,55 8,60 4,65 0,60" fill="#c9920a" opacity="0.7"/>
+      <polygon points="55,4 60,8 65,4 60,0" fill="#c9920a" opacity="0.7"/>
+    </svg>
+  </div>
+
+  <!-- ===== SIDE STRIPS — Paisley chain ===== -->
+  <div class="side-strip left">
+    <svg viewBox="0 0 42 600" width="42" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <linearGradient id="sideGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:rgba(201,146,10,0)"/>
+          <stop offset="15%" style="stop-color:rgba(201,146,10,0.7)"/>
+          <stop offset="50%" style="stop-color:rgba(201,146,10,0.9)"/>
+          <stop offset="85%" style="stop-color:rgba(201,146,10,0.7)"/>
+          <stop offset="100%" style="stop-color:rgba(201,146,10,0)"/>
+        </linearGradient>
+      </defs>
+      <!-- Center line -->
+      <line x1="21" y1="0" x2="21" y2="600" stroke="url(#sideGrad)" stroke-width="1"/>
+      <!-- Repeating diamond chain -->
+      <g fill="rgba(201,146,10,0.6)" stroke="#c9920a" stroke-width="0.5">
+        <polygon points="21,50 27,62 21,74 15,62"/>
+        <polygon points="21,100 27,112 21,124 15,112"/>
+        <polygon points="21,150 27,162 21,174 15,162"/>
+        <polygon points="21,200 27,212 21,224 15,212"/>
+        <polygon points="21,250 27,262 21,274 15,262"/>
+        <polygon points="21,300 27,312 21,324 15,312"/>
+        <polygon points="21,350 27,362 21,374 15,362"/>
+        <polygon points="21,400 27,412 21,424 15,412"/>
+        <polygon points="21,450 27,462 21,474 15,462"/>
+        <polygon points="21,500 27,512 21,524 15,512"/>
+      </g>
+      <!-- Inner dots between diamonds -->
+      <g fill="#c9920a" opacity="0.4">
+        <circle cx="21" cy="87" r="2"/>
+        <circle cx="21" cy="137" r="2"/>
+        <circle cx="21" cy="187" r="2"/>
+        <circle cx="21" cy="237" r="2"/>
+        <circle cx="21" cy="287" r="2"/>
+        <circle cx="21" cy="337" r="2"/>
+        <circle cx="21" cy="387" r="2"/>
+        <circle cx="21" cy="437" r="2"/>
+        <circle cx="21" cy="487" r="2"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="side-strip right">
+    <svg viewBox="0 0 42 600" width="42" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+      <line x1="21" y1="0" x2="21" y2="600" stroke="url(#sideGrad)" stroke-width="1"/>
+      <g fill="rgba(201,146,10,0.6)" stroke="#c9920a" stroke-width="0.5">
+        <polygon points="21,50 27,62 21,74 15,62"/>
+        <polygon points="21,100 27,112 21,124 15,112"/>
+        <polygon points="21,150 27,162 21,174 15,162"/>
+        <polygon points="21,200 27,212 21,224 15,212"/>
+        <polygon points="21,250 27,262 21,274 15,262"/>
+        <polygon points="21,300 27,312 21,324 15,312"/>
+        <polygon points="21,350 27,362 21,374 15,362"/>
+        <polygon points="21,400 27,412 21,424 15,412"/>
+        <polygon points="21,450 27,462 21,474 15,462"/>
+        <polygon points="21,500 27,512 21,524 15,512"/>
+      </g>
+      <g fill="#c9920a" opacity="0.4">
+        <circle cx="21" cy="87" r="2"/>
+        <circle cx="21" cy="137" r="2"/>
+        <circle cx="21" cy="187" r="2"/>
+        <circle cx="21" cy="237" r="2"/>
+        <circle cx="21" cy="287" r="2"/>
+        <circle cx="21" cy="337" r="2"/>
+        <circle cx="21" cy="387" r="2"/>
+        <circle cx="21" cy="437" r="2"/>
+        <circle cx="21" cy="487" r="2"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
+
+    <!-- Sacred row -->
+    <div class="sacred-row">
+      <span class="swastika" title="Swastika – auspicious symbol">卐</span>
+      <div class="om-glyph">ॐ</div>
+      <span class="swastika" title="Swastika – auspicious symbol">卐</span>
+    </div>
+
+    <!-- Primary Sanskrit blessing -->
+    <div class="sanskrit-1">श्री गणेशाय नमः</div>
+
+    <!-- Top divider -->
+    <svg class="hdivider" viewBox="0 0 560 28" height="28" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="dg1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(201,146,10,0)"/>
+          <stop offset="30%" style="stop-color:#c9920a"/>
+          <stop offset="50%" style="stop-color:#f0c040"/>
+          <stop offset="70%" style="stop-color:#c9920a"/>
+          <stop offset="100%" style="stop-color:rgba(201,146,10,0)"/>
+        </linearGradient>
+      </defs>
+      <line x1="0" y1="14" x2="200" y2="14" stroke="url(#dg1)" stroke-width="1"/>
+      <line x1="360" y1="14" x2="560" y2="14" stroke="url(#dg1)" stroke-width="1"/>
+      <!-- Center medallion -->
+      <polygon points="280,4 287,14 280,24 273,14" fill="#c9920a" opacity="0.9"/>
+      <polygon points="280,7 285,14 280,21 275,14" fill="#f0c040" opacity="0.6"/>
+      <!-- Left chain -->
+      <circle cx="240" cy="14" r="3" fill="#c9920a" opacity="0.7"/>
+      <circle cx="225" cy="14" r="2" fill="#c9920a" opacity="0.5"/>
+      <circle cx="215" cy="14" r="2" fill="#c9920a" opacity="0.4"/>
+      <polygon points="200,8 208,14 200,20 192,14" fill="#c9920a" opacity="0.6"/>
+      <!-- Right chain -->
+      <circle cx="320" cy="14" r="3" fill="#c9920a" opacity="0.7"/>
+      <circle cx="335" cy="14" r="2" fill="#c9920a" opacity="0.5"/>
+      <circle cx="345" cy="14" r="2" fill="#c9920a" opacity="0.4"/>
+      <polygon points="360,8 368,14 360,20 352,14" fill="#c9920a" opacity="0.6"/>
+    </svg>
+
+    <!-- Preamble -->
+    <div class="preamble" id="f-preamble">With reverence, gratitude & boundless joy</div>
+
+    <!-- Hosts -->
+    <div class="hosts-label" id="f-hosts-relation">Their sons</div>
+    <div class="hosts-names" id="f-hosts-names">Udit & Yash</div>
+    <div class="invite-phrase" id="f-invite-phrase">joyfully seek your divine blessings &amp; gracious presence<br>to celebrate the</div>
+
+    <!-- Jubilee badge with Kalash SVG art -->
+    <svg viewBox="0 0 460 130" width="460" height="130" xmlns="http://www.w3.org/2000/svg" style="margin: 6px 0 0;">
+      <defs>
+        <linearGradient id="jg" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(201,146,10,0)"/>
+          <stop offset="20%" style="stop-color:rgba(201,146,10,0.4)"/>
+          <stop offset="50%" style="stop-color:rgba(240,192,64,0.5)"/>
+          <stop offset="80%" style="stop-color:rgba(201,146,10,0.4)"/>
+          <stop offset="100%" style="stop-color:rgba(201,146,10,0)"/>
+        </linearGradient>
+      </defs>
+      <!-- Banner ribbon -->
+      <path d="M20,30 L0,65 L20,100 L440,100 L460,65 L440,30 Z" fill="url(#jg)" stroke="#c9920a" stroke-width="1"/>
+      <path d="M30,38 L12,65 L30,92 L430,92 L448,65 L430,38 Z" fill="rgba(201,146,10,0.06)"/>
+      <!-- Left Kalash -->
+      <g transform="translate(35,26)">
+        <!-- Kalash body -->
+        <path d="M20,70 Q5,60 8,40 Q10,20 20,15 Q30,10 40,15 Q50,20 52,40 Q55,60 40,70 Z" fill="rgba(201,146,10,0.2)" stroke="#c9920a" stroke-width="1.2"/>
+        <!-- Neck -->
+        <rect x="22" y="10" width="16" height="8" rx="2" fill="rgba(201,146,10,0.3)" stroke="#c9920a" stroke-width="0.8"/>
+        <!-- Mango on top -->
+        <ellipse cx="30" cy="8" rx="8" ry="5" fill="rgba(201,146,10,0.35)" stroke="#c9920a" stroke-width="0.8"/>
+        <!-- Coconut fronds -->
+        <path d="M30,3 Q22,-5 15,2 M30,3 Q30,-8 30,-2 M30,3 Q38,-5 45,2" stroke="#8b4500" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- Base plate -->
+        <ellipse cx="30" cy="72" rx="15" ry="4" fill="rgba(201,146,10,0.3)" stroke="#c9920a" stroke-width="0.8"/>
+        <!-- Decoration lines on body -->
+        <path d="M14,45 Q30,40 46,45" stroke="#c9920a" stroke-width="0.6" fill="none" opacity="0.6"/>
+        <path d="M13,52 Q30,47 47,52" stroke="#c9920a" stroke-width="0.6" fill="none" opacity="0.6"/>
+        <path d="M16,38 Q30,33 44,38" stroke="#c9920a" stroke-width="0.6" fill="none" opacity="0.6"/>
+        <!-- Mangoes on side -->
+        <ellipse cx="12" cy="30" rx="6" ry="9" fill="rgba(180,80,0,0.25)" stroke="#c9920a" stroke-width="0.7" transform="rotate(-20 12 30)"/>
+        <ellipse cx="48" cy="30" rx="6" ry="9" fill="rgba(180,80,0,0.25)" stroke="#c9920a" stroke-width="0.7" transform="rotate(20 48 30)"/>
+      </g>
+      <!-- Right Kalash (mirror) -->
+      <g transform="translate(365,26) scale(-1,1) translate(-60,0)">
+        <path d="M20,70 Q5,60 8,40 Q10,20 20,15 Q30,10 40,15 Q50,20 52,40 Q55,60 40,70 Z" fill="rgba(201,146,10,0.2)" stroke="#c9920a" stroke-width="1.2"/>
+        <rect x="22" y="10" width="16" height="8" rx="2" fill="rgba(201,146,10,0.3)" stroke="#c9920a" stroke-width="0.8"/>
+        <ellipse cx="30" cy="8" rx="8" ry="5" fill="rgba(201,146,10,0.35)" stroke="#c9920a" stroke-width="0.8"/>
+        <path d="M30,3 Q22,-5 15,2 M30,3 Q30,-8 30,-2 M30,3 Q38,-5 45,2" stroke="#8b4500" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="30" cy="72" rx="15" ry="4" fill="rgba(201,146,10,0.3)" stroke="#c9920a" stroke-width="0.8"/>
+        <path d="M14,45 Q30,40 46,45" stroke="#c9920a" stroke-width="0.6" fill="none" opacity="0.6"/>
+        <path d="M13,52 Q30,47 47,52" stroke="#c9920a" stroke-width="0.6" fill="none" opacity="0.6"/>
+        <ellipse cx="12" cy="30" rx="6" ry="9" fill="rgba(180,80,0,0.25)" stroke="#c9920a" stroke-width="0.7" transform="rotate(-20 12 30)"/>
+        <ellipse cx="48" cy="30" rx="6" ry="9" fill="rgba(180,80,0,0.25)" stroke="#c9920a" stroke-width="0.7" transform="rotate(20 48 30)"/>
+      </g>
+      <!-- Text -->
+      <text x="230" y="58" text-anchor="middle" font-family="'Noto Serif Devanagari', serif" font-size="13" fill="#8b0000" letter-spacing="3" opacity="0.85">रजत जयन्ती</text>
+      <text x="230" y="78" text-anchor="middle" font-family="'Cinzel Decorative', serif" font-size="11" fill="#7a4f00" letter-spacing="5">SILVER JUBILEE</text>
+    </svg>
+
+    <!-- Giant 25th -->
+    <div class="number-25" id="f-anniv-number">25<span class="th-suffix">th</span></div>
+    <div class="years-label" id="f-years-label">✦ &nbsp; Wedding Anniversary &nbsp; ✦</div>
+    <div class="preamble" style="margin-top:6px; margin-bottom:0;">of</div>
+
+    <!-- Divider -->
+    <svg class="hdivider" viewBox="0 0 560 30" height="30" style="margin: 8px 0" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="15" x2="165" y2="15" stroke="url(#dg1)" stroke-width="1"/>
+      <line x1="395" y1="15" x2="560" y2="15" stroke="url(#dg1)" stroke-width="1"/>
+      <!-- Center: 3 diamonds -->
+      <polygon points="220,8 229,15 220,22 211,15" fill="#c9920a" opacity="0.8"/>
+      <polygon points="280,6 292,15 280,24 268,15" fill="#c9920a"/>
+      <circle cx="280" cy="15" r="4" fill="#f0c040" opacity="0.7"/>
+      <polygon points="340,8 349,15 340,22 331,15" fill="#c9920a" opacity="0.8"/>
+      <!-- Dots -->
+      <circle cx="190" cy="15" r="2.5" fill="#c9920a" opacity="0.6"/>
+      <circle cx="205" cy="15" r="1.5" fill="#c9920a" opacity="0.4"/>
+      <circle cx="370" cy="15" r="2.5" fill="#c9920a" opacity="0.6"/>
+      <circle cx="355" cy="15" r="1.5" fill="#c9920a" opacity="0.4"/>
+    </svg>
+
+    <!-- Couple names -->
+    <div class="couple-wrap">
+      <div class="couple-name" id="f-father-name">Lakshmi Narayan Ji</div>
+      <span class="couple-amp">&amp;</span>
+      <div class="couple-name" id="f-mother-name">Savita Ji</div>
+    </div>
+    <div class="married-since" id="f-married-since">Joined in sacred matrimony — 2001 &nbsp;•&nbsp; Through twenty-five golden years</div>
+
+    <!-- Divider -->
+    <svg class="hdivider" viewBox="0 0 560 24" height="24" style="margin: 10px 0" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="12" x2="240" y2="12" stroke="url(#dg1)" stroke-width="1"/>
+      <line x1="320" y1="12" x2="560" y2="12" stroke="url(#dg1)" stroke-width="1"/>
+      <circle cx="265" cy="12" r="5" fill="#c9920a" opacity="0.7"/>
+      <circle cx="280" cy="12" r="7" fill="none" stroke="#c9920a" stroke-width="1" opacity="0.5"/>
+      <circle cx="295" cy="12" r="5" fill="#c9920a" opacity="0.7"/>
+      <circle cx="253" cy="12" r="2" fill="#c9920a" opacity="0.4"/>
+      <circle cx="307" cy="12" r="2" fill="#c9920a" opacity="0.4"/>
+    </svg>
+
+    <!-- Event box -->
+    <div class="event-box">
+      <!-- Corner marks -->
+      <svg style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 500 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- corner swirls -->
+        <path d="M2,2 Q18,2 18,18" stroke="#c9920a" stroke-width="1.2" fill="none" opacity="0.7"/>
+        <path d="M2,2 Q2,18 18,18" stroke="#c9920a" stroke-width="1.2" fill="none" opacity="0.7"/>
+        <path d="M498,2 Q482,2 482,18" stroke="#c9920a" stroke-width="1.2" fill="none" opacity="0.7"/>
+        <path d="M498,2 Q498,18 482,18" stroke="#c9920a" stroke-width="1.2" fill="none" opacity="0.7"/>
+        <path d="M2,158 Q18,158 18,142" stroke="#c9920a" stroke-width="1.2" fill="none" opacity="0.7"/>
+        <path d="M2,158 Q2,142 18,142" stroke="#c9920a" stroke-width="1.2" fill="none" opacity="0.7"/>
+        <path d="M498,158 Q482,158 482,142" stroke="#c9920a" stroke-width="1.2" fill="none" opacity="0.7"/>
+        <path d="M498,158 Q498,142 482,142" stroke="#c9920a" stroke-width="1.2" fill="none" opacity="0.7"/>
+        <circle cx="2" cy="2" r="3" fill="#c9920a" opacity="0.8"/>
+        <circle cx="498" cy="2" r="3" fill="#c9920a" opacity="0.8"/>
+        <circle cx="2" cy="158" r="3" fill="#c9920a" opacity="0.8"/>
+        <circle cx="498" cy="158" r="3" fill="#c9920a" opacity="0.8"/>
+      </svg>
+
+      <div class="event-day-date" id="f-event-day">Wednesday</div>
+      <div class="event-date-full" id="f-event-date">25th February, 2026</div>
+      <div class="event-time" id="f-event-time">7:00 PM</div>
+      <!-- Countdown Timer -->
+      <div id="countdown-wrap" style="margin-top:10px; margin-bottom:2px;">
+        <div id="countdown-label" style="
+          font-family:'Cinzel Decorative',serif;
+          font-size:10px;
+          letter-spacing:4px;
+          color:var(--crimson);
+          text-transform:uppercase;
+          margin-bottom:6px;
+          opacity:0.85;
+        ">Counting Down</div>
+        <div id="countdown-boxes" style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+          <div class="cd-box"><span id="cd-days">--</span><label>Days</label></div>
+          <div class="cd-box"><span id="cd-hours">--</span><label>Hrs</label></div>
+          <div class="cd-box"><span id="cd-mins">--</span><label>Min</label></div>
+          <div class="cd-box"><span id="cd-secs">--</span><label>Sec</label></div>
+        </div>
+      </div>
+      <svg viewBox="0 0 300 12" height="12" width="300" style="margin: 4px 0 8px" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="6" x2="120" y2="6" stroke="#c9920a" stroke-width="0.7" opacity="0.5"/>
+        <polygon points="130,2 138,6 130,10 122,6" fill="#c9920a" opacity="0.6"/>
+        <polygon points="150,1 161,6 150,11 139,6" fill="#c9920a" opacity="0.8"/>
+        <polygon points="170,2 178,6 170,10 162,6" fill="#c9920a" opacity="0.6"/>
+        <line x1="180" y1="6" x2="300" y2="6" stroke="#c9920a" stroke-width="0.7" opacity="0.5"/>
+      </svg>
+      <div class="venue-line1" id="f-venue-name">Hotel Skylark</div>
+      <div class="venue-line2" id="f-venue-address">Ambala Road, Saharanpur</div>
+    </div>
+
+    <!-- RSVP -->
+    <div class="rsvp-row">
+      <div class="rsvp-label">RSVP</div>
+      <svg width="8" height="20" viewBox="0 0 8 20"><polygon points="4,0 8,10 4,20 0,10" fill="#c9920a" opacity="0.7"/></svg>
+      <div class="rsvp-num" id="f-rsvp-number">+91 98979 18964</div>
+    </div>
+
+    <!-- Bottom divider -->
+    <svg class="hdivider" viewBox="0 0 560 28" height="28" style="margin: 18px 0 0" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="14" x2="170" y2="14" stroke="url(#dg1)" stroke-width="1"/>
+      <line x1="390" y1="14" x2="560" y2="14" stroke="url(#dg1)" stroke-width="1"/>
+      <!-- Diya / lamp silhouette center -->
+      <path d="M270,20 Q260,12 264,6 Q268,2 280,4 Q292,2 296,6 Q300,12 290,20 Q280,24 270,20Z" fill="rgba(201,146,10,0.25)" stroke="#c9920a" stroke-width="0.8"/>
+      <path d="M276,6 Q280,2 284,6" stroke="#c9920a" stroke-width="1" fill="none"/>
+      <line x1="280" y1="2" x2="280" y2="0" stroke="#f0c040" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Left/right small diyas -->
+      <path d="M220,18 Q214,13 216,9 Q218,6 224,7 Q230,6 232,9 Q234,13 228,18Z" fill="rgba(201,146,10,0.2)" stroke="#c9920a" stroke-width="0.7"/>
+      <line x1="224" y1="7" x2="224" y2="4" stroke="#f0c040" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M340,18 Q334,13 336,9 Q338,6 344,7 Q350,6 352,9 Q354,13 348,18Z" fill="rgba(201,146,10,0.2)" stroke="#c9920a" stroke-width="0.7"/>
+      <line x1="344" y1="7" x2="344" y2="4" stroke="#f0c040" stroke-width="1.2" stroke-linecap="round"/>
+      <!-- dots -->
+      <circle cx="195" cy="14" r="2" fill="#c9920a" opacity="0.5"/>
+      <circle cx="207" cy="14" r="1.5" fill="#c9920a" opacity="0.4"/>
+      <circle cx="365" cy="14" r="2" fill="#c9920a" opacity="0.5"/>
+      <circle cx="353" cy="14" r="1.5" fill="#c9920a" opacity="0.4"/>
+    </svg>
+
+    <!-- Bottom blessings -->
+    <div class="bottom-blessings">
+      <div class="mantra-sanskrit" id="f-bottom-mantra">॥ सर्वे भवन्तु सुखिनः ॥</div>
+    </div>
+
+  </div><!-- /content -->
+
+</div><!-- /card -->
+</div><!-- /wrapper -->
+<!-- ===== RESPONSIVE CSS ===== -->
+<style>
+/* ── Tablet ── */
+@media (max-width: 820px) {
+  .card-wrapper, .card { width: 100% !important; }
+  .content { padding: 70px 60px 36px !important; }
+  .couple-name { font-size: 24px !important; }
+  .hosts-names { font-size: 20px !important; }
+  .number-25 { font-size: 80px !important; }
+  .number-25 .th-suffix { font-size: 32px !important; }
+  .corner { width: 100px !important; height: 100px !important; }
+  .event-box { width: 92% !important; }
+}
+
+/* ── Mobile ── */
+@media (max-width: 520px) {
+  body { padding: 12px 8px !important; align-items: flex-start !important; }
+  .card-wrapper, .card { width: 100% !important; border-radius: 4px; }
+  .content { padding: 68px 44px 30px !important; }
+  .om-glyph { font-size: 40px !important; height: 50px !important; }
+  .swastika { font-size: 20px !important; height: 50px !important; }
+  .sacred-row { height: 50px !important; gap: 16px !important; }
+  .sanskrit-1 { font-size: 13px !important; letter-spacing: 2px !important; }
+  .hosts-names { font-size: 18px !important; letter-spacing: 1px !important; }
+  .hosts-label { font-size: 13px !important; }
+  .invite-phrase { font-size: 14px !important; }
+  .preamble { font-size: 10px !important; letter-spacing: 2px !important; }
+  .number-25 { font-size: 72px !important; }
+  .number-25 .th-suffix { font-size: 26px !important; }
+  .years-label { font-size: 10px !important; letter-spacing: 4px !important; }
+  .couple-name { font-size: 20px !important; }
+  .couple-amp { font-size: 44px !important; }
+  .married-since { font-size: 11px !important; }
+  .event-box { width: 96% !important; padding: 16px 18px !important; }
+  .event-day-date { font-size: 14px !important; }
+  .event-date-full { font-size: 20px !important; }
+  .event-time { font-size: 14px !important; }
+  .venue-line1 { font-size: 13px !important; }
+  .venue-line2 { font-size: 12px !important; }
+  .rsvp-num { font-size: 13px !important; letter-spacing: 1.5px !important; }
+  .rsvp-label { font-size: 9px !important; }
+  .mantra-sanskrit { font-size: 12px !important; letter-spacing: 2px !important; }
+  .corner { width: 70px !important; height: 70px !important; }
+  .side-strip { width: 28px !important; }
+  .bg-mandala { width: 90% !important; height: auto !important; }
+  /* SVG jubilee banner scale on mobile */
+  .content > svg[viewBox="0 0 460 130"] { width: 100% !important; height: auto !important; }
+  .hdivider { width: 100% !important; }
+  #music-btn { width: 44px !important; height: 44px !important; bottom: 16px !important; right: 16px !important; }
+  #music-ring { width: 66px !important; height: 66px !important; bottom: 5px !important; right: 5px !important; }
+  #music-label { bottom: 68px !important; right: 10px !important; font-size: 10px !important; }
+  .wedding-anniv { font-size: 22px !important; }
+}
+</style>
+
+<!-- ===== BACKGROUND MUSIC — 3 Random Songs ===== -->
+<iframe id="yt-iframe" allow="autoplay" style="display:none;" title="background music"></iframe>
+
+<!-- Music Button -->
+<div id="music-btn" onclick="toggleMusic()" title="Toggle Music">
+  <span id="music-icon">🔊</span>
+</div>
+<div id="music-ring"></div>
+<div id="music-label">♪ tap anywhere to play</div>
+
+<style>
+/* Music button styles */
+#music-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7a4000, #c9920a, #f0c040);
+  box-shadow: 0 4px 20px rgba(180,100,0,0.5), 0 0 0 3px rgba(201,146,10,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.2s ease;
+  animation: btnPulse 2.5s ease-in-out infinite;
+  user-select: none;
+}
+#music-btn span { font-size: 22px; line-height: 1; }
+#music-ring {
+  position: fixed;
+  bottom: 14px;
+  right: 14px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid rgba(201,146,10,0.4);
+  z-index: 9998;
+  animation: ringPulse 2.5s ease-in-out infinite;
+  pointer-events: none;
+}
+#music-label {
+  position: fixed;
+  bottom: 88px;
+  right: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 11px;
+  color: #c9920a;
+  letter-spacing: 1px;
+  text-align: center;
+  opacity: 0.85;
+  z-index: 9999;
+  pointer-events: none;
+  white-space: nowrap;
+  background: rgba(20,5,0,0.6);
+  padding: 3px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(201,146,10,0.3);
+}
+/* Song name toast */
+#song-toast {
+  position: fixed;
+  bottom: 110px;
+  right: 14px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: #f0c040;
+  letter-spacing: 1px;
+  text-align: right;
+  z-index: 9999;
+  pointer-events: none;
+  white-space: nowrap;
+  background: rgba(20,5,0,0.75);
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(201,146,10,0.4);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  max-width: 220px;
+  white-space: normal;
+  text-align: center;
+}
+@keyframes btnPulse {
+  0%,100% { box-shadow: 0 4px 20px rgba(180,100,0,0.5), 0 0 0 3px rgba(201,146,10,0.3); }
+  50%      { box-shadow: 0 4px 28px rgba(180,100,0,0.8), 0 0 0 6px rgba(201,146,10,0.15); }
+}
+@keyframes ringPulse {
+  0%   { transform: scale(0.9); opacity: 0.7; }
+  50%  { transform: scale(1.1); opacity: 0.2; }
+  100% { transform: scale(0.9); opacity: 0.7; }
+}
+#music-btn:hover { transform: scale(1.1); }
+#music-btn:active { transform: scale(0.93); }
+</style>
+
+<!-- Song name toast element -->
+<div id="song-toast"></div>
+
+<script>
+  // ── 3 Songs — exactly as provided, picked randomly every load/refresh ──
+  const SONGS = [
+    { id: 'qoq8B8ThgEM', name: '🎵 Tujh Mein Rab Dikhta Hai' },
+    { id: 'YYq0zm67bH8', name: '🎵 Song 2' },
+    { id: 'orYf6VDtj_k', name: '🎵 Song 3' },
+  ];
+
+  // Pick a random song every time (including refresh)
+  const chosen = SONGS[Math.floor(Math.random() * SONGS.length)];
+  const iframe  = document.getElementById('yt-iframe');
+  const icon    = document.getElementById('music-icon');
+  const label   = document.getElementById('music-label');
+  const toast   = document.getElementById('song-toast');
+
+  let muted = false;
+  let started = false;
+
+  function buildSrc(mute) {
+    return `https://www.youtube.com/embed/${chosen.id}?autoplay=1&loop=1&playlist=${chosen.id}&controls=0&mute=${mute ? 1 : 0}&enablejsapi=1`;
+  }
+
+  function showToast(text) {
+    toast.textContent = text;
+    toast.style.opacity = '1';
+    setTimeout(() => { toast.style.opacity = '0'; }, 3500);
+  }
+
+  function startMusic() {
+    if (started) return;
+    started = true;
+    iframe.src = buildSrc(false);
+    muted = false;
+    icon.textContent = '🔊';
+    label.style.display = 'none';
+    showToast(chosen.name);
+  }
+
+  function toggleMusic() {
+    if (!started) { startMusic(); return; }
+    muted = !muted;
+    iframe.src = buildSrc(muted);
+    icon.textContent = muted ? '🔇' : '🔊';
+    if (muted) {
+      label.textContent = '♪ tap to unmute';
+      label.style.display = 'block';
+    } else {
+      label.style.display = 'none';
+      showToast(chosen.name);
+    }
+  }
+
+  // Auto-start on first interaction anywhere on the page
+  ['click','touchstart'].forEach(ev =>
+    document.addEventListener(ev, startMusic, { once: true })
+  );
+</script>
+
+<!-- ===== COUNTDOWN + DIYAS + SPARKLES STYLES ===== -->
+<style>
+/* ── Countdown boxes ── */
+.cd-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(139,0,0,0.08), rgba(201,146,10,0.15));
+  border: 1px solid rgba(201,146,10,0.45);
+  border-radius: 6px;
+  padding: 6px 10px 4px;
+  min-width: 48px;
+}
+.cd-box span {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(180deg, #f0c040, #c9920a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+.cd-box label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--crimson);
+  text-transform: uppercase;
+  margin-top: 3px;
+  opacity: 0.8;
+}
+#countdown-done {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--crimson);
+  letter-spacing: 2px;
+  margin-top: 8px;
+  display: none;
+}
+@media (max-width:520px) {
+  .cd-box { min-width: 38px; padding: 5px 7px 3px; }
+  .cd-box span { font-size: 17px !important; }
+  #countdown-boxes { gap: 6px !important; }
+}
+
+
+/* ── Sparkle Canvas ── */
+#sparkle-canvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 6;
+  border-radius: inherit;
+}
+</style>
+
+
+<!-- ===== GOLD SPARKLE CANVAS ===== -->
+<script>
+  // Inject sparkle canvas into the card
+  document.querySelector('.card').insertAdjacentHTML('afterbegin',
+    '<canvas id="sparkle-canvas"></canvas>'
+  );
+</script>
+
+<!-- ===== ALL ENHANCEMENTS JS ===== -->
+<script>
+// ══════════════════════════════════════════
+// 1. LIVE COUNTDOWN to 25 Feb 2026 7:00 PM
+// ══════════════════════════════════════════
+(function countdown() {
+  const target = new Date('2026-02-25T19:00:00');
+  function tick() {
+    const now  = new Date();
+    const diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('countdown-boxes').style.display = 'none';
+      document.getElementById('countdown-label').textContent = '🎉 The Celebration Has Begun!';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000)  / 60000);
+    const s = Math.floor((diff % 60000)    / 1000);
+    document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+
+// ══════════════════════════════════════════
+// 2. FLOATING GOLD SPARKLE PARTICLES
+// ══════════════════════════════════════════
+(function sparkles() {
+  const canvas = document.getElementById('sparkle-canvas');
+  const card   = document.querySelector('.card');
+  const ctx    = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width  = card.offsetWidth;
+    canvas.height = card.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Gold colours
+  const COLORS = [
+    'rgba(240,192,64,',
+    'rgba(201,146,10,',
+    'rgba(255,220,100,',
+    'rgba(180,100,0,',
+  ];
+
+  // Create particles
+  const PARTICLE_COUNT = 38;
+  const particles = Array.from({ length: PARTICLE_COUNT }, () => createParticle(true));
+
+  function createParticle(randomY = false) {
+    return {
+      x:    Math.random() * canvas.width,
+      y:    randomY ? Math.random() * canvas.height : canvas.height + 10,
+      size: Math.random() * 3.5 + 1,
+      speedY: -(Math.random() * 0.6 + 0.2),
+      speedX:  (Math.random() - 0.5) * 0.4,
+      alpha:  Math.random() * 0.7 + 0.3,
+      fade:   Math.random() * 0.008 + 0.002,
+      color:  COLORS[Math.floor(Math.random() * COLORS.length)],
+      shape:  Math.random() > 0.5 ? 'star' : 'circle',
+      rot:    Math.random() * Math.PI * 2,
+      rotSpd: (Math.random() - 0.5) * 0.05,
+    };
+  }
+
+  function drawStar(ctx, x, y, r, rot) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(rot);
+    ctx.beginPath();
+    for (let i = 0; i < 5; i++) {
+      const a1 = (i * 4 * Math.PI) / 5 - Math.PI / 2;
+      const a2 = ((i * 4 + 2) * Math.PI) / 5 - Math.PI / 2;
+      ctx.lineTo(Math.cos(a1) * r, Math.sin(a1) * r);
+      ctx.lineTo(Math.cos(a2) * r * 0.4, Math.sin(a2) * r * 0.4);
+    }
+    ctx.closePath();
+    ctx.restore();
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((p, i) => {
+      p.x     += p.speedX;
+      p.y     += p.speedY;
+      p.alpha -= p.fade;
+      p.rot   += p.rotSpd;
+
+      if (p.alpha <= 0 || p.y < -10) {
+        particles[i] = createParticle(false);
+        return;
+      }
+
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle   = p.color + p.alpha + ')';
+
+      if (p.shape === 'star') {
+        drawStar(ctx, p.x, p.y, p.size, p.rot);
+        ctx.fill();
+      } else {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size / 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    });
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script>
+
+</body>
+</html>
